@@ -9,7 +9,13 @@ dart_code_metrics:
     number-of-methods: 10
     weight-of-class: 0.33
     maintainability-index: 50
+  rules:
+    - member-ordering-extended:
+        exclude:
+          - integration_test/**
+          - test_screen/**
 
 linter:
   rules:
     public_member_api_docs: true
+    sort_pub_dependencies: false
