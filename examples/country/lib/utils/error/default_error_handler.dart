@@ -4,7 +4,7 @@ import 'package:elementary/elementary.dart';
 /// This just print error to console.
 class DefaultErrorHandler implements ErrorHandler {
   @override
-  void handleError(Object error) {
+  void handleError(Object error, {StackTrace? stackTrace}) {
     // ignore: avoid_print
     print(error);
   }
