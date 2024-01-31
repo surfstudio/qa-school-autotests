@@ -2,6 +2,7 @@ import 'package:elementary/elementary.dart';
 import 'package:flutter/material.dart';
 import 'package:profile/assets/colors/colors.dart';
 import 'package:profile/assets/strings/personal_data_screen_strings.dart';
+import 'package:profile/assets/strings/test_keys.dart';
 import 'package:profile/features/profile/domain/profile.dart';
 import 'package:profile/features/profile/screens/personal_data_screen/personal_data_screen_widget_model.dart';
 import 'package:profile/features/profile/screens/personal_data_screen/widgets/text_form_field_widget.dart';
@@ -215,6 +216,7 @@ class _DateWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      key: TestKeys.dateOfBirthField,
       readOnly: true,
       controller: controller,
       onTap: () {
