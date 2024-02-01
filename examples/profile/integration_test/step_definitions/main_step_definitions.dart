@@ -10,6 +10,7 @@ final mainStepDefinitions = [
         (context, tester) async {
       await tester.pumpUntilVisible(mainTestScreen.trait);
       await tester.implicitTap(mainTestScreen.editProfileBtn);
+      await tester.pumpUntilVisible(personalDataTestScreen.trait);
     },
   ),
 ];

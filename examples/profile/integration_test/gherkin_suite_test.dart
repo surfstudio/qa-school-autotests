@@ -6,6 +6,7 @@ import 'package:surf_flutter_test/surf_flutter_test.dart';
 import 'package:surf_logger/surf_logger.dart';
 
 import 'step_definitions/main_step_definitions.dart';
+import 'step_definitions/personal_data_step_definitions.dart';
 
 part 'gherkin_suite_test.g.dart';
 
@@ -32,6 +33,7 @@ void main() {
         JsonReporter(writeReport: (_, __) => Future<void>.value()),
       ],
       stepDefinitions: [
+        ...personalDataStepDefinitions,
         ...mainStepDefinitions,
       ],
     ),
