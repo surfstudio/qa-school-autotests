@@ -35,7 +35,7 @@ class _CustomGherkinIntegrationTestRunner extends GherkinIntegrationTestRunner {
           name: 'Успешное заполнение профиля данными',
           description: null,
           path:
-              '/Users/lazarev/GITHUB/qa-school-autotests/examples/profile/./integration_test/features/profile.feature',
+              'C:\\Users\\ad-riaz\\Documents\\Surf_QA_Bootcamp_2024\\surf-qa-school-autotests\\examples\\profile\\.\\integration_test\\features\\profile.feature',
           tags: <String>[],
           steps: [
             (
@@ -67,7 +67,103 @@ class _CustomGherkinIntegrationTestRunner extends GherkinIntegrationTestRunner {
               bool skip,
             ) async {
               return await runStep(
+                name: 'И Я указываю имя',
+                multiLineStrings: <String>[],
+                table: null,
+                dependencies: dependencies,
+                skip: skip,
+              );
+            },
+            (
+              TestDependencies dependencies,
+              bool skip,
+            ) async {
+              return await runStep(
+                name: 'И Я указываю отчество',
+                multiLineStrings: <String>[],
+                table: null,
+                dependencies: dependencies,
+                skip: skip,
+              );
+            },
+            (
+              TestDependencies dependencies,
+              bool skip,
+            ) async {
+              return await runStep(
                 name: 'И Я указываю дату рождения',
+                multiLineStrings: <String>[],
+                table: null,
+                dependencies: dependencies,
+                skip: skip,
+              );
+            },
+            (
+              TestDependencies dependencies,
+              bool skip,
+            ) async {
+              return await runStep(
+                name: 'И Я перехожу далее',
+                multiLineStrings: <String>[],
+                table: null,
+                dependencies: dependencies,
+                skip: skip,
+              );
+            },
+            (
+              TestDependencies dependencies,
+              bool skip,
+            ) async {
+              return await runStep(
+                name: 'И Я выбираю город',
+                multiLineStrings: <String>[],
+                table: null,
+                dependencies: dependencies,
+                skip: skip,
+              );
+            },
+            (
+              TestDependencies dependencies,
+              bool skip,
+            ) async {
+              return await runStep(
+                name: 'И Я перехожу далее на список интересов',
+                multiLineStrings: <String>[],
+                table: null,
+                dependencies: dependencies,
+                skip: skip,
+              );
+            },
+            (
+              TestDependencies dependencies,
+              bool skip,
+            ) async {
+              return await runStep(
+                name: 'И Я указываю интересы',
+                multiLineStrings: <String>[],
+                table: null,
+                dependencies: dependencies,
+                skip: skip,
+              );
+            },
+            (
+              TestDependencies dependencies,
+              bool skip,
+            ) async {
+              return await runStep(
+                name: 'И Я перехожу далее на экран информации о себе',
+                multiLineStrings: <String>[],
+                table: null,
+                dependencies: dependencies,
+                skip: skip,
+              );
+            },
+            (
+              TestDependencies dependencies,
+              bool skip,
+            ) async {
+              return await runStep(
+                name: 'И Я указываю информацию о себе и сохраняю данные',
                 multiLineStrings: <String>[],
                 table: null,
                 dependencies: dependencies,
@@ -78,14 +174,14 @@ class _CustomGherkinIntegrationTestRunner extends GherkinIntegrationTestRunner {
           onBefore: () async => onBeforeRunFeature(
             name: 'Профиль',
             path:
-                '/Users/lazarev/GITHUB/qa-school-autotests/examples/profile/./integration_test/features/profile.feature',
+                'C:\\Users\\ad-riaz\\Documents\\Surf_QA_Bootcamp_2024\\surf-qa-school-autotests\\examples\\profile\\.\\integration_test\\features\\profile.feature',
             description: null,
             tags: <String>[],
           ),
           onAfter: () async => onAfterRunFeature(
             name: 'Профиль',
             path:
-                '/Users/lazarev/GITHUB/qa-school-autotests/examples/profile/./integration_test/features/profile.feature',
+                'C:\\Users\\ad-riaz\\Documents\\Surf_QA_Bootcamp_2024\\surf-qa-school-autotests\\examples\\profile\\.\\integration_test\\features\\profile.feature',
             description: null,
             tags: <String>[],
           ),

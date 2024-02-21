@@ -14,6 +14,14 @@ class PersonalDataTestScreen {
   Finder surnameField =
       generalTestScreen.textFormFieldWidget(PersonalDataScreenStrings.surnameHint);
 
+  /// Поле ввода имени
+  Finder firstNameField =
+      generalTestScreen.textFormFieldWidget(PersonalDataScreenStrings.nameTitle);
+
+  /// Поле ввода отчества
+  Finder secondNameField =
+      generalTestScreen.textFormFieldWidget(PersonalDataScreenStrings.secondNameHint);
+
   /// Поле выбора даты рождения.
   final Finder dateOfBirthField = find.byKey(TestKeys.dateOfBirthField);
 }
