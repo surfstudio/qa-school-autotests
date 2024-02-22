@@ -8,11 +8,11 @@ class AboutMeTestScreen {
   // Экран.
   final Finder trait = find.byType(AboutMeScreen);
 
-  //
+  // Поле ввода
   Finder textFormField = find.byWidgetPredicate((widget) {
     return widget is TextFormField;
   });
 
-  /// Кнопка Save.
+  // Кнопка Save.
   final Finder saveBtn = find.byType(ElevatedButton);
 }

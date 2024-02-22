@@ -5,9 +5,10 @@ import 'package:profile/features/profile/screens/place_residence/place_residence
 import '../test_screen_library.dart';
 
 class ResidenceTestScreen {
-  /// Экран.
+  // Экран
   final Finder trait = find.byType(PlaceResidenceScreen);
 
+  // Выпадающее меню
   Finder suggestionWidget(String city) => find.byWidgetPredicate((widget) {
     return widget is ListTile && widget.title.toString().contains(city);
   });

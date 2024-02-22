@@ -7,21 +7,21 @@ import 'package:profile/features/profile/screens/personal_data_screen/personal_d
 import '../test_screen_library.dart';
 
 class PersonalDataTestScreen {
-  /// Экран.
+  // Экран
   final Finder trait = find.byType(PersonalDataScreen);
 
-  /// Поле ввода фамилии.
+  // Поле ввода фамилии
   Finder surnameField =
       generalTestScreen.textFormFieldWidget(PersonalDataScreenStrings.surnameHint);
 
-  /// Поле ввода имени
+  // Поле ввода имени
   Finder firstNameField =
       generalTestScreen.textFormFieldWidget(PersonalDataScreenStrings.nameTitle);
 
-  /// Поле ввода отчества
+  // Поле ввода отчества
   Finder secondNameField =
       generalTestScreen.textFormFieldWidget(PersonalDataScreenStrings.secondNameHint);
 
-  /// Поле выбора даты рождения.
+  // Поле выбора даты рождения.
   final Finder dateOfBirthField = find.byKey(TestKeys.dateOfBirthField);
 }

@@ -4,6 +4,6 @@ import 'package:profile/features/profile/screens/interests_screen/interests_scre
 import '../test_screen_library.dart';
 
 class InterestsTestScreen {
-  /// Экран.
+  // Экран
   final Finder trait = find.byType(InterestsScreen);
 }

@@ -3,10 +3,10 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:profile/features/profile/screens/init_screen/init_screen.dart';
 
 class MainTestScreen {
-  /// Экран.
+  // Экран
    final Finder trait = find.byType(InitScreen);
 
-  /// Кнопка редактирования профиля.
+  // Кнопка редактирования профиля.
   Finder get editProfileBtn =>
    find.descendant(of: trait, matching: find.byType(ElevatedButton));
 }
