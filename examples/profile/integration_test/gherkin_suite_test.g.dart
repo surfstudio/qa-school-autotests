@@ -278,6 +278,58 @@ class _CustomGherkinIntegrationTestRunner extends GherkinIntegrationTestRunner {
                 skip: skip,
               );
             },
+            (
+              TestDependencies dependencies,
+              bool skip,
+            ) async {
+              return await runStep(
+                name:
+                    'Когда Я нажимаю кнопку "Назад" и перехожу на экран интересов',
+                multiLineStrings: <String>[],
+                table: null,
+                dependencies: dependencies,
+                skip: skip,
+              );
+            },
+            (
+              TestDependencies dependencies,
+              bool skip,
+            ) async {
+              return await runStep(
+                name:
+                    'И Я нажимаю кнопку "Назад" и перехожу на экран выбора города',
+                multiLineStrings: <String>[],
+                table: null,
+                dependencies: dependencies,
+                skip: skip,
+              );
+            },
+            (
+              TestDependencies dependencies,
+              bool skip,
+            ) async {
+              return await runStep(
+                name:
+                    'И Я нажимаю кнопку "Назад" и перехожу на экран с ФИО и датой рождения',
+                multiLineStrings: <String>[],
+                table: null,
+                dependencies: dependencies,
+                skip: skip,
+              );
+            },
+            (
+              TestDependencies dependencies,
+              bool skip,
+            ) async {
+              return await runStep(
+                name:
+                    'И Я нажимаю кнопку "Назад" и перехожу на экран заполнения профиля',
+                multiLineStrings: <String>[],
+                table: null,
+                dependencies: dependencies,
+                skip: skip,
+              );
+            },
           ],
           onBefore: () async => onBeforeRunFeature(
             name: 'Профиль',

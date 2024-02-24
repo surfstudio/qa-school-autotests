@@ -44,4 +44,12 @@ final interestsStepDefinitions = [
       await tester.pumpUntilVisible(aboutMeTestScreen.trait);
     },
   ),
+  testerWhen<FlutterWidgetTesterWorld>(
+    RegExp(r'Я нажимаю кнопку "Назад" и перехожу на экран выбора города$'),
+        (context, tester) async {
+      await tester.pumpUntilVisible(interestsTestScreen.trait);
+      await tester.implicitTap(generalTestScreen.backBtn);
+      await tester.pumpUntilVisible(residenceTestScreen.trait);
+    },
+  ),
 ];

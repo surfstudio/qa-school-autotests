@@ -44,4 +44,12 @@ final residenceStepDefinitions = [
       await tester.pumpUntilVisible(interestsTestScreen.trait);
     },
   ),
+  testerWhen<FlutterWidgetTesterWorld>(
+    RegExp(r'Я нажимаю кнопку "Назад" и перехожу на экран с ФИО и датой рождения$'),
+        (context, tester) async {
+      await tester.pumpUntilVisible(residenceTestScreen.trait);
+      await tester.implicitTap(generalTestScreen.backBtn);
+      await tester.pumpUntilVisible(personalDataTestScreen.trait);
+    },
+  ),
 ];

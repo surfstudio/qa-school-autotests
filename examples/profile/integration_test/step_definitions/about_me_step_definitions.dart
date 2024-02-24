@@ -28,4 +28,12 @@ final aboutMeStepDefinitions = [
       expect(aboutMe, testAboutMe);
     },
   ),
+  testerWhen<FlutterWidgetTesterWorld>(
+    RegExp(r'Я нажимаю кнопку "Назад" и перехожу на экран интересов$'),
+        (context, tester) async {
+      await tester.pumpUntilVisible(aboutMeTestScreen.textFormField);
+      await tester.implicitTap(generalTestScreen.backBtn);
+      await tester.pumpUntilVisible(interestsTestScreen.trait);
+    },
+  ),
 ];

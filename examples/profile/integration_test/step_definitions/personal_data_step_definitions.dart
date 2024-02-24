@@ -85,4 +85,12 @@ final personalDataStepDefinitions = [
       await tester.pumpUntilVisible(residenceTestScreen.trait);
     },
   ),
+  testerWhen<FlutterWidgetTesterWorld>(
+    RegExp(r'Я нажимаю кнопку "Назад" и перехожу на экран заполнения профиля$'),
+        (context, tester) async {
+      await tester.pumpUntilVisible(personalDataTestScreen.trait);
+      await tester.implicitTap(generalTestScreen.backBtn);
+      await tester.pumpUntilVisible(mainTestScreen.trait);
+    },
+  ),
 ];
