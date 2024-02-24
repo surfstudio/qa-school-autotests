@@ -1,5 +1,7 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_gherkin/flutter_gherkin.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:profile/features/profile/screens/interests_screen/interests_screen.dart';
 import 'package:surf_flutter_test/surf_flutter_test.dart';
 
 import '../test_screen_library.dart';
@@ -33,7 +35,26 @@ final interestsStepDefinitions = [
     RegExp(r'Я вижу указанные интересы$'),
         (context, tester) async {
       await tester.pumpUntilVisible(interestsTestScreen.trait);
-      // FIXME: Добавить логику проверки чекбоксов
+
+      for (var i = 0; i < interests.length; i++) {
+        Finder checkBoxText = find.text(interests[i]);
+        expect(checkBoxText, findsOneWidget);
+
+        Finder row = find.widgetWithText(Row, interests[i]);
+        expect(row, findsOneWidget);
+
+        var checkbox =
+            find.descendant(
+              of: row,
+              matching: find.byType(Checkbox))
+            .evaluate()
+            .first
+            .widget;
+
+        // FIXME: Добавить логику проверки чекбоксов
+        // Не понятно, как получить value у чекбокса
+        // expect(checkbox.value, true);
+      }
     },
   ),
   testerWhen<FlutterWidgetTesterWorld>(
