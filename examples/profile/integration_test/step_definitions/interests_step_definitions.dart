@@ -48,12 +48,10 @@ final interestsStepDefinitions = [
               of: row,
               matching: find.byType(Checkbox))
             .evaluate()
-            .first
-            .widget;
+            .single
+            .widget as Checkbox;
 
-        // FIXME: Добавить логику проверки чекбоксов
-        // Не понятно, как получить value у чекбокса
-        // expect(checkbox.value, true);
+        expect(checkbox.value, true);
       }
     },
   ),
