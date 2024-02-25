@@ -360,6 +360,88 @@ class _CustomGherkinIntegrationTestRunner extends GherkinIntegrationTestRunner {
               );
             },
           ],
+        );
+
+        runScenario(
+          name: 'Валидация пустых полей на экране персональных данных',
+          description: null,
+          path:
+              'C:\\Users\\ad-riaz\\Documents\\Surf_QA_Bootcamp_2024\\surf-qa-school-autotests\\examples\\profile\\.\\integration_test\\features\\profile.feature',
+          tags: <String>[],
+          steps: [
+            (
+              TestDependencies dependencies,
+              bool skip,
+            ) async {
+              return await runStep(
+                name: 'Когда Я перехожу на экран редактирования профиля',
+                multiLineStrings: <String>[],
+                table: null,
+                dependencies: dependencies,
+                skip: skip,
+              );
+            },
+            (
+              TestDependencies dependencies,
+              bool skip,
+            ) async {
+              return await runStep(
+                name: 'И Я заполняю фамилию',
+                multiLineStrings: <String>[],
+                table: null,
+                dependencies: dependencies,
+                skip: skip,
+              );
+            },
+            (
+              TestDependencies dependencies,
+              bool skip,
+            ) async {
+              return await runStep(
+                name: 'И Я заполняю имя',
+                multiLineStrings: <String>[],
+                table: null,
+                dependencies: dependencies,
+                skip: skip,
+              );
+            },
+            (
+              TestDependencies dependencies,
+              bool skip,
+            ) async {
+              return await runStep(
+                name: 'И Я заполняю отчество',
+                multiLineStrings: <String>[],
+                table: null,
+                dependencies: dependencies,
+                skip: skip,
+              );
+            },
+            (
+              TestDependencies dependencies,
+              bool skip,
+            ) async {
+              return await runStep(
+                name: 'И Я заполняю дату рождения',
+                multiLineStrings: <String>[],
+                table: null,
+                dependencies: dependencies,
+                skip: skip,
+              );
+            },
+            (
+              TestDependencies dependencies,
+              bool skip,
+            ) async {
+              return await runStep(
+                name: 'Тогда Я валидирую заполненные поля',
+                multiLineStrings: <String>[],
+                table: null,
+                dependencies: dependencies,
+                skip: skip,
+              );
+            },
+          ],
           onAfter: () async => onAfterRunFeature(
             name: 'Профиль',
             path:

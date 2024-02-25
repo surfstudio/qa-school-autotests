@@ -24,6 +24,14 @@ final mainStepDefinitions = [
       await tester.pumpUntilVisible(personalDataTestScreen.trait);
     },
   ),
+  testerWhen<FlutterWidgetTesterWorld>(
+    RegExp(r'Я перехожу на экран редактирования профиля$'),
+    (context, tester) async {
+      await tester.pumpUntilVisible(mainTestScreen.trait);
+      await tester.implicitTap(mainTestScreen.editProfileBtn);
+      await tester.pumpUntilVisible(personalDataTestScreen.trait);
+    },
+  ),
   testerThen<FlutterWidgetTesterWorld>(
     RegExp(r'Тогда Я проверяю текст кнопки$'),
     (context, tester) async {

@@ -94,6 +94,36 @@ When(/^Я нажимаю кнопку "Назад" и перехожу на эк
   pending
 end
 
+
+
+
 Then(/^Я проверяю текст кнопки$/) do
   pending
+end
+
+
+
+
+When(/^Я перехожу на экран редактирования профиля$/) do
+  pending
+end
+
+When(/^Я заполняю фамилию$/) do
+  pending
+end
+
+When(/^Я заполняю имя$/) do
+  pending
+end
+
+When(/^Я заполняю отчество$/) do
+  pending
+end
+
+When(/^Я заполняю дату рождения$/) do
+  pending
+end
+
+Then(/^Я валидирую заполненные поля$/) do
+     pending
 end
