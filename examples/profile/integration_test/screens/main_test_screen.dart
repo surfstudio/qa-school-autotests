@@ -8,5 +8,8 @@ class MainTestScreen {
 
   // Кнопка редактирования профиля.
   Finder get editProfileBtn =>
-   find.descendant(of: trait, matching: find.byType(ElevatedButton));
+    find.descendant(of: trait, matching: find.byType(ElevatedButton));
+
+  Finder get editProfileBtnText =>
+    find.descendant(of: editProfileBtn, matching: find.byType(Text));
 }
