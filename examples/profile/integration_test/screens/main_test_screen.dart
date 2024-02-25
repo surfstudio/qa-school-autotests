@@ -4,12 +4,16 @@ import 'package:profile/features/profile/screens/init_screen/init_screen.dart';
 
 class MainTestScreen {
   // Экран
-   final Finder trait = find.byType(InitScreen);
+  final Finder trait = find.byType(InitScreen);
 
-  // Кнопка редактирования профиля.
+  // Кнопка редактирования профиля
   Finder get editProfileBtn =>
-    find.descendant(of: trait, matching: find.byType(ElevatedButton));
+      find.descendant(
+          of: trait,
+          matching: find.byType(ElevatedButton)
+      );
 
+  // Текст кнопки редактирования профиля
   Finder get editProfileBtnText =>
-    find.descendant(of: editProfileBtn, matching: find.byType(Text));
+      find.descendant(of: editProfileBtn, matching: find.byType(Text));
 }

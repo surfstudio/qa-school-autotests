@@ -4,13 +4,15 @@ import 'package:profile/features/profile/screens/personal_data_screen/widgets/te
 import 'package:profile/features/profile/widgets/next_button.dart';
 
 class GeneralTestScreen {
-  ///  Поля ввода на экране персональных данных.
-   Finder textFormFieldWidget(String hint) => find.byWidgetPredicate((widget) {
-         return widget is TextFormFieldWidget && widget.hintText == hint;
-   });
+  //  Поля ввода на экране персональных данных
+  Finder textFormFieldWidget(String hint) => find.byWidgetPredicate((widget) {
+        return widget is TextFormFieldWidget && widget.hintText == hint;
+  });
 
-   /// Кнопка Далее.
-   final Finder nextBtn = find.descendant(of: find.byType(NextButton), matching: find.byType(ElevatedButton));
+  // Кнопка Далее
+  final Finder nextBtn = find.descendant(
+      of: find.byType(NextButton), matching: find.byType(ElevatedButton));
 
-   final Finder backBtn = find.byType(BackButton);
+  // Кнопка Назад
+  final Finder backBtn = find.byType(BackButton);
 }

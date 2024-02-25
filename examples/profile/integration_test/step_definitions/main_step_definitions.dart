@@ -10,7 +10,7 @@ final String testBtnText = 'Edit profile';
 final mainStepDefinitions = [
   testerWhen<FlutterWidgetTesterWorld>(
     RegExp(r'Я перехожу к редактированию профиля$'),
-        (context, tester) async {
+    (context, tester) async {
       await tester.pumpUntilVisible(mainTestScreen.trait);
       await tester.implicitTap(mainTestScreen.editProfileBtn);
       await tester.pumpUntilVisible(personalDataTestScreen.trait);
@@ -18,7 +18,7 @@ final mainStepDefinitions = [
   ),
   testerWhen<FlutterWidgetTesterWorld>(
     RegExp(r'Я снова перехожу к редактированию профиля$'),
-        (context, tester) async {
+    (context, tester) async {
       await tester.pumpUntilVisible(mainTestScreen.trait);
       await tester.implicitTap(mainTestScreen.editProfileBtn);
       await tester.pumpUntilVisible(personalDataTestScreen.trait);
@@ -26,10 +26,11 @@ final mainStepDefinitions = [
   ),
   testerThen<FlutterWidgetTesterWorld>(
     RegExp(r'Тогда Я проверяю текст кнопки$'),
-        (context, tester) async {
+    (context, tester) async {
       await tester.pumpUntilVisible(mainTestScreen.trait);
 
-      var text = mainTestScreen.editProfileBtnText.evaluate().single.widget as Text;
+      var text =
+          mainTestScreen.editProfileBtnText.evaluate().single.widget as Text;
       var textData = text.data;
 
       expect(textData, testBtnText);

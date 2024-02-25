@@ -29,7 +29,8 @@ final residenceStepDefinitions = [
     (context, tester) async {
       await tester.pumpUntilVisible(residenceTestScreen.placeField);
 
-      final testCity = tester.widget<TextFormField>(residenceTestScreen.placeField)
+      final testCity = tester
+          .widget<TextFormField>(residenceTestScreen.placeField)
           .controller
           ?.text;
 
@@ -45,8 +46,9 @@ final residenceStepDefinitions = [
     },
   ),
   testerWhen<FlutterWidgetTesterWorld>(
-    RegExp(r'Я нажимаю кнопку "Назад" и перехожу на экран с ФИО и датой рождения$'),
-        (context, tester) async {
+    RegExp(
+        r'Я нажимаю кнопку "Назад" и перехожу на экран с ФИО и датой рождения$'),
+    (context, tester) async {
       await tester.pumpUntilVisible(residenceTestScreen.trait);
       await tester.implicitTap(generalTestScreen.backBtn);
       await tester.pumpUntilVisible(personalDataTestScreen.trait);

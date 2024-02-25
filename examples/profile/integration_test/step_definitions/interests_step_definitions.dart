@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gherkin/flutter_gherkin.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:profile/features/profile/screens/interests_screen/interests_screen.dart';
 import 'package:surf_flutter_test/surf_flutter_test.dart';
 
 import '../test_screen_library.dart';
@@ -25,7 +24,7 @@ final interestsStepDefinitions = [
   ),
   testerWhen<FlutterWidgetTesterWorld>(
     RegExp(r'Я перехожу далее на экран информации о себе$'),
-        (context, tester) async {
+    (context, tester) async {
       await tester.pumpUntilVisible(interestsTestScreen.trait);
       await tester.implicitTap(generalTestScreen.nextBtn);
       await tester.pumpUntilVisible(aboutMeTestScreen.trait);
@@ -33,7 +32,7 @@ final interestsStepDefinitions = [
   ),
   testerThen<FlutterWidgetTesterWorld>(
     RegExp(r'Я вижу указанные интересы$'),
-        (context, tester) async {
+    (context, tester) async {
       await tester.pumpUntilVisible(interestsTestScreen.trait);
 
       for (var i = 0; i < interests.length; i++) {
@@ -43,10 +42,8 @@ final interestsStepDefinitions = [
         Finder row = find.widgetWithText(Row, interests[i]);
         expect(row, findsOneWidget);
 
-        var checkbox =
-            find.descendant(
-              of: row,
-              matching: find.byType(Checkbox))
+        var checkbox = find
+            .descendant(of: row, matching: find.byType(Checkbox))
             .evaluate()
             .single
             .widget as Checkbox;
@@ -57,7 +54,7 @@ final interestsStepDefinitions = [
   ),
   testerWhen<FlutterWidgetTesterWorld>(
     RegExp(r'Я перехожу далее для проверки информации о себе$'),
-        (context, tester) async {
+    (context, tester) async {
       await tester.pumpUntilVisible(interestsTestScreen.trait);
       await tester.implicitTap(generalTestScreen.nextBtn);
       await tester.pumpUntilVisible(aboutMeTestScreen.trait);
@@ -65,7 +62,7 @@ final interestsStepDefinitions = [
   ),
   testerWhen<FlutterWidgetTesterWorld>(
     RegExp(r'Я нажимаю кнопку "Назад" и перехожу на экран выбора города$'),
-        (context, tester) async {
+    (context, tester) async {
       await tester.pumpUntilVisible(interestsTestScreen.trait);
       await tester.implicitTap(generalTestScreen.backBtn);
       await tester.pumpUntilVisible(residenceTestScreen.trait);
