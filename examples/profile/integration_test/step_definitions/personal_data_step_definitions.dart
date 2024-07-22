@@ -9,7 +9,7 @@ final personalDataStepDefinitions = [
     RegExp(r'Я указываю фамилию$'),
     (context, tester) async {
       await tester.implicitEnterText(
-          personalDataTestScreen.surnameField, 'Rogers');
+          personalDataTestScreen.surnameField, "Gosling");
     },
   ),
   testerWhen<FlutterWidgetTesterWorld>(
@@ -17,7 +17,19 @@ final personalDataStepDefinitions = [
     (context, tester) async {
       final calendar =
           tester.widget<TextFormField>(personalDataTestScreen.dateOfBirthField);
-      calendar.controller?.text = '04.07.1980';
+      calendar.controller?.text = '2000-01-01';
+    },
+  ),
+  testerWhen<FlutterWidgetTesterWorld>(
+    RegExp(r'Я указываю имя$'),
+        (context, tester) async {
+      await tester.implicitEnterText(personalDataTestScreen.nameField, "Ryan");
+    },
+  ),
+  testerWhen<FlutterWidgetTesterWorld>(
+    RegExp(r'Я указываю отчество$'),
+        (context, tester) async {
+      await tester.implicitEnterText(personalDataTestScreen.secondName, "Nikolaevich");
     },
   ),
 ];
